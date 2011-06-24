@@ -1,3 +1,15 @@
 php_extensions:
     - mysql
     - xsl
+    
+url_rewrites:
+    - "^/symphony/(.*)$ /symphony/index.php?page=$1 last"
+    - "^/image/(.+\.(jpg|gif|jpeg|png|bmp|JPG|GIF|JPEG|PNG|BMP))$ /extensions/jit_image_manipulation/lib/image.php?param=$1 last"
+    - 
+        rule: "^/(.*[^/]+)$ /$1/ permanent"
+        conditions:
+            - "!-f $request_filename"
+    -
+        rule: "^/(.*)$ /index.php?page=$1 last"
+        conditions:
+            - "!-d $request_filename"
