@@ -98,10 +98,10 @@
 	if ( isset($_SERVER['SERVER_SOFTWARE']) && $_SERVER['SERVER_SOFTWARE'] == 'pagodabox' ) {
 	
 		$settings['database']['host']     = 'localhost';
-		$settings['database']['port']     = '/tmp/mysql/misti.sock';
-		$settings['database']['user']     = 'erline';
-		$settings['database']['password'] = 'h2IgLPri';
-		$settings['database']['db']       = 'misti';
+		$settings['database']['port']     = '/tmp/mysql/bulah.sock';
+		$settings['database']['user']     = 'vicenta';
+		$settings['database']['password'] = 'yA6nIX3t';
+		$settings['database']['db']       = 'bulah';
 	
 	}
 
