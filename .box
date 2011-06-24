@@ -15,8 +15,15 @@ url_rewrites:
     ### URL Correction
     - "^/(symphony/)?index.php(/.*/?) /$1$2"
     
-    ### ADMIN REWRITE
+    ### SIMPLE ADMIN REWRITE
     - "^/symphony\/?$ /?mode=administration&$query_string last"
+    
+    ### ADVANCED ADMIN REWRITE
+    -
+        rule: "^/symphony(\/(.*\/?))?$ /?symphony-page=$1&mode=administration&$query_string last"
+        conditions:
+            - "!-f $request_filename"
+            - "!-d $request_filename"
     
     ### FRONTEND REWRITE - Will ignore files and folders
     - 
