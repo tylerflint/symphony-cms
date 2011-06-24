@@ -3,4 +3,4 @@ php_extensions:
     - xsl
     
 url_rewrites:
-    - "^symphony\/?$ /index.php?mode=administration&$query_string"
+    - "^symphony\/?$ index.php?mode=administration&$query_string"
