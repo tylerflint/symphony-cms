@@ -3,8 +3,8 @@ php_extensions:
     - xsl
     
 url_rewrites:
-    - "^(symphony/)?index.php(/.*/?) $1$2"
-    - "^/symphony\/?$ index.php?mode=administration&$query_string"
+    - "^/index.php(.*) $1"
+    - "^/symphony\/?$ /index.php?mode=administration&$query_string"
     -
         rule: "^/symphony(\/(.*\/?))?$ /index.php?symphony-page=$1&mode=administration&$query_string"
         conditions:
