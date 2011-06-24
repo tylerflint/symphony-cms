@@ -4,3 +4,8 @@ php_extensions:
     
 url_rewrites:
     - "^symphony\/?$ index.php?mode=administration&$query_string"
+    -
+        rule: "^symphony(\/(.*\/?))?$ index.php?symphony-page=$1&mode=administration&$query_string"
+        conditions:
+            - "!-f $request_filename"
+            - "!-d $request_filename"
