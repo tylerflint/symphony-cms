@@ -94,3 +94,16 @@
 		########
 	);
 
+	// Override for PagodaBox
+	if ( isset($_SERVER['SERVER_SOFTWARE']) && $_SERVER['SERVER_SOFTWARE'] == 'pagodabox' ) {
+	
+		$settings['database']['host']     = 'localhost';
+		$settings['database']['port']     = 'sock';
+		$settings['database']['user']     = 'user';
+		$settings['database']['password'] = 'pass';
+		$settings['database']['db']       = 'db';
+	
+	}
+
+
+
